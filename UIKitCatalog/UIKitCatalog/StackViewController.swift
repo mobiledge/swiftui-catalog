@@ -43,6 +43,8 @@ class StackViewController: UIViewController {
     override func loadView() {
         view = UIView()
         view.backgroundColor = UIColor.systemBackground
+        // Can't set view = stackView because stackView doesn't have a backgroundColor property
+        // and consequently it shows up black.
         view.addSubview(stackView)
         stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
