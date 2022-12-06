@@ -25,8 +25,8 @@ class ViewController: UITableViewController {
 
 
     func navigateToStackViewController() {
-
-
+        let vc = StackViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
